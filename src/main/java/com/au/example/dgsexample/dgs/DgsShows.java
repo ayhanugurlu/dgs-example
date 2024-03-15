@@ -5,10 +5,10 @@ import com.netflix.graphql.dgs.DgsQuery;
 import com.netflix.graphql.dgs.InputArgument;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @DgsComponent
 public class DgsShows {
+
 
     @DgsQuery
     public List<Show> dgsShows(@InputArgument Integer score) {
@@ -28,7 +28,7 @@ public class DgsShows {
     public List<Show> allDgsShows() {
         var shows = List.of(new Show("Stranger Things", 5), new Show("Ozark", 4));
 
-        return shows.stream().collect(Collectors.toList());
+        return shows.stream().toList();
     }
 
 }
