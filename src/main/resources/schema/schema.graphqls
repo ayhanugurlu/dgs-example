@@ -1,0 +1,9 @@
+type Query {
+    dgsShows(score: Int): [Show]
+    allDgsShows: [Show]
+}
+
+type Show {
+    title: String
+    score: Int
+}
